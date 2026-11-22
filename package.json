@@ -1,0 +1,27 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "Procedural Three.js diorama of a Caltex petrol station in Johor, Malaysia.",
+  "main": "src/main.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

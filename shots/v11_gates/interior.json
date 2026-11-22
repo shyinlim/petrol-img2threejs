@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "kind": "interior-difference",
+  "baseline": "shots/v8_v10_r3_ref.png",
+  "render": "shots/v8_v11_t3_ref.png",
+  "band": {
+    "from": 0.0,
+    "to": 1.0
+  },
+  "grid": 192,
+  "cellsCompared": 21002,
+  "warnings": [],
+  "interiorDifference": 0.0397847716823594,
+  "status": "measured"
+}

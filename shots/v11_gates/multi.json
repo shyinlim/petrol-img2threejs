@@ -1,0 +1,26 @@
+{
+  "referenceAreaFraction": 0.3164929607896652,
+  "angles": [
+    {
+      "path": "shots/v8_v11_t3_az090.png",
+      "areaFraction": 0.3202257892103348,
+      "ratio": 1.011794348952836,
+      "degenerate": false
+    },
+    {
+      "path": "shots/v8_v11_t3_az180.png",
+      "areaFraction": 0.31461517467248906,
+      "ratio": 0.9940668945290568,
+      "degenerate": false
+    },
+    {
+      "path": "shots/v8_v11_t3_az270.png",
+      "areaFraction": 0.3090997998544396,
+      "ratio": 0.9766403621844247,
+      "degenerate": false
+    }
+  ],
+  "degenerate": false,
+  "collapseRatio": 0.15,
+  "note": "deterministic; zero token; a flat-plane-faking-a-volume collapses in silhouette area when orbited"
+}

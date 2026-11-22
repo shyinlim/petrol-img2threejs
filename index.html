@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caltex Station</title>
+<style>
+  :root {
+    --ink: #1d1d1f; --mute: #5f554e; --line: rgba(60,40,30,.14); --accent: #4a4540; --track: #b4a9a0; --focus: #0071e3;
+    --surface: rgba(255,255,255,.42); --field: rgba(60,40,30,.08); --field-hover: rgba(60,40,30,.15);
+    --border-hair: rgba(60,40,30,.12); --shadow: rgba(80,50,30,.16);
+    --sys: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  }
+  @media (prefers-contrast: more) {
+    :root { --mute: var(--ink); --line: rgba(60,40,30,.35); --surface: #fff; --border-hair: rgba(60,40,30,.4); }
+  }
+  body.dark-bg {
+    --ink: #f5f5f7; --mute: #b8aea6; --line: rgba(255,255,255,.14); --accent: #d8cfc8; --track: rgba(255,255,255,.28); --focus: #0a84ff;
+    --surface: rgba(36,33,31,.45); --field: rgba(255,255,255,.1); --field-hover: rgba(255,255,255,.18);
+    --border-hair: rgba(255,255,255,.14); --shadow: rgba(0,0,0,.42);
+  }
+  @media (prefers-contrast: more) {
+    body.dark-bg { --line: rgba(255,255,255,.4); --surface: #1d1d1f; --border-hair: rgba(255,255,255,.45); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+  html, body { margin: 0; height: 100%; background: radial-gradient(ellipse at 50% 45%, var(--bg, #FFB375) 0%, #E2CBBA 100%); font-family: var(--sys); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  body.gate { background: #303030; overflow: hidden; }
+  #stage { position: fixed; inset: 0; }
+  #stage canvas { display: block; }
+  body.gate #stage { inset: auto; left: 0; top: 0; width: 1024px; height: 687px; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* gallery chrome: brand header top-left, footnote bottom-left (they never take pointer events) */
+  #brand { position: fixed; left: 32px; top: 24px; display: flex; align-items: center; gap: 12px; pointer-events: none; }
+  #brand-mark { width: 38px; height: 38px; object-fit: contain; flex-shrink: 0; }
+  #brand-copy { display: flex; flex-direction: column; gap: 3px; }
+  #title { margin: 0; line-height: 0; color: var(--ink); }
+  #title svg { height: 26px; width: auto; display: block; }
+  #eyebrow { font-size: 13px; line-height: 1.2; color: var(--mute); }
+  #footnote { position: fixed; left: 33px; bottom: 26px; pointer-events: none; font-size: 12px; line-height: 1.4; }
+  #footnote em { display: block; font-style: normal; font-weight: 600; font-size: 13px; }
+  #footnote small { display: block; color: var(--mute); font-size: 12px; }
+
+  /* right panel: floating inspector, one translucent layer over the scene */
+  #panel { position: fixed; right: 16px; top: 16px; width: 280px; background: var(--surface); border-radius: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 0 0 .5px var(--border-hair), 0 10px 32px var(--shadow); font-size: 13px; -webkit-backdrop-filter: blur(28px) saturate(1.8); backdrop-filter: blur(28px) saturate(1.8); }
+  @media (prefers-reduced-transparency: reduce) { #panel, #toolbar { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+  #panel-head { display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; width: 100%; padding: 12px 16px; border: 0; background: none; font: inherit; font-weight: 600; text-align: left; color: var(--ink); cursor: pointer; }
+  #panel-head::after { content: ""; width: 7px; height: 7px; border-right: 1.6px solid var(--mute); border-bottom: 1.6px solid var(--mute); transform: rotate(45deg) translate(-2px, -2px); transition: transform .15s; }
+  #panel-head[aria-expanded="false"]::after { transform: rotate(-45deg); }
+  #panel-body { max-height: calc(100vh - 100px); overflow-y: auto; padding: 0 16px 12px; }
+  #panel.collapsed #panel-body { display: none; }
+  .group { padding: 8px 0 4px; border-top: 1px solid var(--line); }
+  .group summary { list-style: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; margin: 0 0 4px; font-size: 12px; font-weight: 600; color: var(--mute); user-select: none; min-height: 22px; }
+  .group summary::-webkit-details-marker { display: none; }
+  .group summary::after { content: ""; width: 5px; height: 5px; border-right: 1.5px solid var(--mute); border-bottom: 1.5px solid var(--mute); transform: rotate(45deg) translate(-1px, -1px); transition: transform .15s; }
+  .group:not([open]) summary { margin-bottom: 0; }
+  .group:not([open]) summary::after { transform: rotate(-45deg); }
+  .row { display: grid; grid-template-columns: 112px 1fr 56px; align-items: center; gap: 8px; margin: 2px 0; min-height: 28px; }
+  .row label { font-size: 13px; color: var(--ink); }
+  .row input[type=number] { width: 56px; box-sizing: border-box; height: 26px; padding: 0 6px; border: 0; border-radius: 6px; background: var(--field); font: inherit; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }
+  .row input[type=color] { width: 100%; height: 26px; padding: 2px; border: 0; border-radius: 6px; background: var(--field); cursor: pointer; }
+  .row .hex { font-size: 12px; color: var(--mute); text-align: right; font-variant-numeric: tabular-nums; }
+  .row input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 24px; margin: 0; background: transparent; cursor: pointer; }
+  .row input[type=range]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--accent) var(--pct, 0%), var(--track) var(--pct, 0%)); }
+  .row input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; margin-top: -4px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1.5px rgba(255,255,255,.85), 0 1px 3px rgba(0,0,0,.22); }
+  .row input[type=range]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--track); }
+  .row input[type=range]::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--accent); }
+  .row input[type=range]::-moz-range-thumb { width: 12px; height: 12px; border: 1.5px solid rgba(255,255,255,.85); border-radius: 50%; background: var(--accent); box-sizing: border-box; }
+  .panel-actions { padding-top: 10px; }
+  .panel-actions button { width: 100%; font: inherit; font-weight: 500; min-height: 30px; padding: 0 12px; border: 0; border-radius: 8px; background: var(--field); color: var(--ink); cursor: pointer; }
+  .panel-actions button:hover { background: var(--field-hover); }
+
+  /* bottom-centre toolbar */
+  #toolbar { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; align-items: center; gap: 4px;
+    padding: 6px 10px; background: var(--surface); border-radius: 999px; box-shadow: 0 0 0 .5px var(--border-hair), 0 10px 32px var(--shadow); -webkit-backdrop-filter: blur(24px) saturate(1.4); backdrop-filter: blur(24px) saturate(1.4); }
+  #toolbar button { width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  #toolbar button:hover { background: var(--field); }
+  #toolbar button.on { background: var(--ink); color: #fff; }
+  body.dark-bg #toolbar button.on { color: #1d1d1f; }
+  #toolbar svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  #toolbar .sep { width: 1px; height: 20px; margin: 0 4px; background: var(--line); }
+
+  body.gate #brand, body.gate #footnote, body.gate #panel, body.gate #toolbar { display: none; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<header id="brand">
+  <img id="brand-mark" src="/decals/caltex_roundel.png" alt="" width="38" height="38">
+  <div id="brand-copy">
+    <h1 id="title">
+      <svg viewBox="126 30 180 46" role="img" aria-label="Caltex Station">
+        <g fill="currentColor"><path d="M156.36 70.137l13.012-34.687h7.56l12.747 34.687h-7.785l-8.73-25.875-8.599 25.875z"/><path d="M165.589 70.137l7.575-6.075 7.447 6.075zM193.68 35.45h7.628V63.8h12.037v6.337H193.68zM210.401 35.45h24.544v6.262h-8.584v28.5h-7.8v-28.5h-8.16zM239.85 35.525h19.32v6.187h-11.771v7.65h11.092v6.263H247.4v8.1h15.078l-5.16 6.487H239.85zM265.294 35.525h10.005l5.561 9.712 5.438-9.712h9.975l-10.864 15.75 14.426 18.937h-9.675l-9.023-12.337-9.24 12.337h-9.757l14.183-18.862zM154.035 44.712v-7.575c-8.408-3.937-17.243-1.162-22.658 7.163-3.847 6.6-3.337 13.125 1.53 19.65 4.208 5.212 11.19 7.837 21.128 5.4v-7.988c-6.266 3.338-13.598 1.875-16.53-3.262-3.259-7.838 1.264-15.113 7.594-15.713 3.285-.262 6.6.375 8.936 2.325"/></g>
+      </svg>
+    </h1>
+    <div id="eyebrow">Pagoh Jaya, Johor, Malaysia</div>
+  </div>
+</header>
+<div id="footnote"><em>Procedural Diorama</em><small>Three.js · Built in code, no external models</small></div>
+
+<div id="panel">
+  <button id="panel-head" aria-expanded="true" aria-controls="panel-body">Controls</button>
+  <div id="panel-body">
+    <details class="group" open><summary>Light</summary>
+      <div class="row"><label for="s-az">Sun azimuth</label><input id="s-az" type="range" min="-180" max="180" step="1" value="-37"><input id="v-az" type="number" min="-180" max="180" step="1"></div>
+      <div class="row"><label for="s-el">Sun height</label><input id="s-el" type="range" min="10" max="80" step="0.5" value="40.5"><input id="v-el" type="number" min="10" max="80" step="0.5"></div>
+      <div class="row"><label for="s-exp">Exposure</label><input id="s-exp" type="range" min="0.5" max="1.5" step="0.05" value="0.9"><input id="v-exp" type="number" min="0.5" max="1.5" step="0.05"></div>
+      <div class="row"><label for="s-sh">Shadow softness</label><input id="s-sh" type="range" min="0" max="10" step="0.5" value="0"><input id="v-sh" type="number" min="0" max="10" step="0.5"></div>
+      <div class="row"><label for="s-env">Ambient light</label><input id="s-env" type="range" min="0" max="1" step="0.05" value="0.3"><input id="v-env" type="number" min="0" max="1" step="0.05"></div>
+    </details>
+    <details class="group" open><summary>Color</summary>
+      <div class="row"><label for="c-canopy">Brand</label><input id="c-canopy" type="color" value="#ed1b2f"><span class="hex" id="h-canopy"></span></div>
+      <div class="row"><label for="c-grass">Grass</label><input id="c-grass" type="color" value="#5fb84a"><span class="hex" id="h-grass"></span></div>
+      <div class="row"><label for="c-pump">Pumps</label><input id="c-pump" type="color" value="#ac5545"><span class="hex" id="h-pump"></span></div>
+      <div class="row"><label for="c-bg">Background</label><input id="c-bg" type="color" value="#ffb375"><span class="hex" id="h-bg"></span></div>
+    </details>
+    <details class="group" open><summary>Structure</summary>
+      <div class="row"><label for="s-ch">Canopy height</label><input id="s-ch" type="range" min="0.7" max="1.3" step="0.01" value="1"><input id="v-ch" type="number" min="0.7" max="1.3" step="0.01"></div>
+    </details>
+    <details class="group" open><summary>Motion</summary>
+      <div class="row"><label for="s-rot">Spin speed</label><input id="s-rot" type="range" min="0.5" max="8" step="0.5" value="2"><input id="v-rot" type="number" min="0.5" max="8" step="0.5"></div>
+      <div class="row"><label for="s-wind">Wind</label><input id="s-wind" type="range" min="0" max="0.3" step="0.01" value="0.14"><input id="v-wind" type="number" min="0" max="0.3" step="0.01"></div>
+      <div class="row"><label for="s-car">Car speed</label><input id="s-car" type="range" min="0.25" max="3" step="0.25" value="2"><input id="v-car" type="number" min="0.25" max="3" step="0.25"></div>
+    </details>
+    <div class="group panel-actions">
+      <button id="b-reset" type="button">Reset</button>
+    </div>
+  </div>
+</div>
+
+<div id="toolbar">
+  <button id="b-reset-view" title="Reset View" aria-label="Reset View"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></button>
+  <button id="b-rotate" title="Auto Rotate" aria-label="Auto Rotate" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12a9 9 0 0 1 15.5-6.2"/><path d="M18.5 2v4h-4"/><path d="M5.5 22v-4h4"/></svg></button>
+  <span class="sep"></span>
+  <button id="b-fullscreen" title="Full Screen" aria-label="Full Screen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  <button id="b-shot" title="Save Image" aria-label="Save Image"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

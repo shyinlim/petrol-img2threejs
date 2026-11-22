@@ -1,0 +1,839 @@
+{
+ "parts": [
+  {
+   "name": "root",
+   "kind": "part",
+   "module": "root",
+   "triangles": 1728
+  },
+  {
+   "name": "base-slab",
+   "kind": "part",
+   "module": "base-slab",
+   "triangles": 1728
+  },
+  {
+   "name": "concrete-top",
+   "kind": "part",
+   "module": "concrete-top",
+   "triangles": 300
+  },
+  {
+   "name": "grass-verge-a",
+   "kind": "part",
+   "module": "grass-verge-a",
+   "triangles": 300
+  },
+  {
+   "name": "agave-1-leaf-1",
+   "kind": "part",
+   "module": "agave-1-leaf-1",
+   "triangles": 832
+  },
+  {
+   "name": "agave-1-leaf-2",
+   "kind": "part",
+   "module": "agave-1-leaf-2",
+   "triangles": 832
+  },
+  {
+   "name": "agave-1-leaf-3",
+   "kind": "part",
+   "module": "agave-1-leaf-3",
+   "triangles": 832
+  },
+  {
+   "name": "agave-1-leaf-4",
+   "kind": "part",
+   "module": "agave-1-leaf-4",
+   "triangles": 832
+  },
+  {
+   "name": "agave-1-leaf-5",
+   "kind": "part",
+   "module": "agave-1-leaf-5",
+   "triangles": 832
+  },
+  {
+   "name": "agave-2-leaf-1",
+   "kind": "part",
+   "module": "agave-2-leaf-1",
+   "triangles": 832
+  },
+  {
+   "name": "agave-2-leaf-2",
+   "kind": "part",
+   "module": "agave-2-leaf-2",
+   "triangles": 832
+  },
+  {
+   "name": "agave-2-leaf-3",
+   "kind": "part",
+   "module": "agave-2-leaf-3",
+   "triangles": 832
+  },
+  {
+   "name": "agave-2-leaf-4",
+   "kind": "part",
+   "module": "agave-2-leaf-4",
+   "triangles": 832
+  },
+  {
+   "name": "agave-2-leaf-5",
+   "kind": "part",
+   "module": "agave-2-leaf-5",
+   "triangles": 832
+  },
+  {
+   "name": "kerb-verge-a",
+   "kind": "part",
+   "module": "kerb-verge-a",
+   "triangles": 300
+  },
+  {
+   "name": "grass-verge-b",
+   "kind": "part",
+   "module": "grass-verge-b",
+   "triangles": 300
+  },
+  {
+   "name": "agave-3-leaf-1",
+   "kind": "part",
+   "module": "agave-3-leaf-1",
+   "triangles": 832
+  },
+  {
+   "name": "agave-3-leaf-2",
+   "kind": "part",
+   "module": "agave-3-leaf-2",
+   "triangles": 832
+  },
+  {
+   "name": "agave-3-leaf-3",
+   "kind": "part",
+   "module": "agave-3-leaf-3",
+   "triangles": 832
+  },
+  {
+   "name": "agave-3-leaf-4",
+   "kind": "part",
+   "module": "agave-3-leaf-4",
+   "triangles": 832
+  },
+  {
+   "name": "agave-3-leaf-5",
+   "kind": "part",
+   "module": "agave-3-leaf-5",
+   "triangles": 832
+  },
+  {
+   "name": "agave-4-leaf-1",
+   "kind": "part",
+   "module": "agave-4-leaf-1",
+   "triangles": 832
+  },
+  {
+   "name": "agave-4-leaf-2",
+   "kind": "part",
+   "module": "agave-4-leaf-2",
+   "triangles": 832
+  },
+  {
+   "name": "agave-4-leaf-3",
+   "kind": "part",
+   "module": "agave-4-leaf-3",
+   "triangles": 832
+  },
+  {
+   "name": "agave-4-leaf-4",
+   "kind": "part",
+   "module": "agave-4-leaf-4",
+   "triangles": 832
+  },
+  {
+   "name": "agave-4-leaf-5",
+   "kind": "part",
+   "module": "agave-4-leaf-5",
+   "triangles": 832
+  },
+  {
+   "name": "kerb-verge-b",
+   "kind": "part",
+   "module": "kerb-verge-b",
+   "triangles": 300
+  },
+  {
+   "name": "grass-verge-c",
+   "kind": "part",
+   "module": "grass-verge-c",
+   "triangles": 300
+  },
+  {
+   "name": "kerb-verge-c",
+   "kind": "part",
+   "module": "kerb-verge-c",
+   "triangles": 300
+  },
+  {
+   "name": "canopy",
+   "kind": "part",
+   "module": "canopy",
+   "triangles": 300
+  },
+  {
+   "name": "soffit",
+   "kind": "part",
+   "module": "soffit",
+   "triangles": 1728
+  },
+  {
+   "name": "canopy-wordmark",
+   "kind": "part",
+   "module": "canopy-wordmark",
+   "triangles": 1728
+  },
+  {
+   "name": "fascia-lip-top",
+   "kind": "part",
+   "module": "fascia-lip-top",
+   "triangles": 1728
+  },
+  {
+   "name": "fascia-lip-end",
+   "kind": "part",
+   "module": "fascia-lip-end",
+   "triangles": 1728
+  },
+  {
+   "name": "roundel-logo",
+   "kind": "part",
+   "module": "roundel-logo",
+   "triangles": 832
+  },
+  {
+   "name": "column-1",
+   "kind": "part",
+   "module": "column-1",
+   "triangles": 1728
+  },
+  {
+   "name": "column-disc-1",
+   "kind": "part",
+   "module": "column-disc-1",
+   "triangles": 832
+  },
+  {
+   "name": "column-2",
+   "kind": "part",
+   "module": "column-2",
+   "triangles": 1728
+  },
+  {
+   "name": "column-disc-2",
+   "kind": "part",
+   "module": "column-disc-2",
+   "triangles": 832
+  },
+  {
+   "name": "column-3",
+   "kind": "part",
+   "module": "column-3",
+   "triangles": 1728
+  },
+  {
+   "name": "column-disc-3",
+   "kind": "part",
+   "module": "column-disc-3",
+   "triangles": 832
+  },
+  {
+   "name": "column-4",
+   "kind": "part",
+   "module": "column-4",
+   "triangles": 1728
+  },
+  {
+   "name": "column-disc-4",
+   "kind": "part",
+   "module": "column-disc-4",
+   "triangles": 832
+  },
+  {
+   "name": "pump-1",
+   "kind": "part",
+   "module": "pump-1",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-panel-1",
+   "kind": "part",
+   "module": "pump-panel-1",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-screen-1",
+   "kind": "part",
+   "module": "pump-screen-1",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-island-1",
+   "kind": "part",
+   "module": "pump-island-1",
+   "triangles": 196
+  },
+  {
+   "name": "pump-head-1",
+   "kind": "part",
+   "module": "pump-head-1",
+   "triangles": 300
+  },
+  {
+   "name": "pump-sign-1",
+   "kind": "part",
+   "module": "pump-sign-1",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-pillar-1a",
+   "kind": "part",
+   "module": "pump-pillar-1a",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-1a",
+   "kind": "part",
+   "module": "pump-nozzle-1a",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-1a",
+   "kind": "part",
+   "module": "pump-hose-1a",
+   "triangles": 320
+  },
+  {
+   "name": "pump-pillar-1b",
+   "kind": "part",
+   "module": "pump-pillar-1b",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-1b",
+   "kind": "part",
+   "module": "pump-nozzle-1b",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-1b",
+   "kind": "part",
+   "module": "pump-hose-1b",
+   "triangles": 320
+  },
+  {
+   "name": "pump-cabinet-1",
+   "kind": "part",
+   "module": "pump-cabinet-1",
+   "triangles": 300
+  },
+  {
+   "name": "pump-cabinet-top-1",
+   "kind": "part",
+   "module": "pump-cabinet-top-1",
+   "triangles": 300
+  },
+  {
+   "name": "pump-2",
+   "kind": "part",
+   "module": "pump-2",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-panel-2",
+   "kind": "part",
+   "module": "pump-panel-2",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-screen-2",
+   "kind": "part",
+   "module": "pump-screen-2",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-island-2",
+   "kind": "part",
+   "module": "pump-island-2",
+   "triangles": 196
+  },
+  {
+   "name": "pump-head-2",
+   "kind": "part",
+   "module": "pump-head-2",
+   "triangles": 300
+  },
+  {
+   "name": "pump-sign-2",
+   "kind": "part",
+   "module": "pump-sign-2",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-pillar-2a",
+   "kind": "part",
+   "module": "pump-pillar-2a",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-2a",
+   "kind": "part",
+   "module": "pump-nozzle-2a",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-2a",
+   "kind": "part",
+   "module": "pump-hose-2a",
+   "triangles": 320
+  },
+  {
+   "name": "pump-pillar-2b",
+   "kind": "part",
+   "module": "pump-pillar-2b",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-2b",
+   "kind": "part",
+   "module": "pump-nozzle-2b",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-2b",
+   "kind": "part",
+   "module": "pump-hose-2b",
+   "triangles": 320
+  },
+  {
+   "name": "pump-cabinet-2",
+   "kind": "part",
+   "module": "pump-cabinet-2",
+   "triangles": 300
+  },
+  {
+   "name": "pump-cabinet-top-2",
+   "kind": "part",
+   "module": "pump-cabinet-top-2",
+   "triangles": 300
+  },
+  {
+   "name": "pump-3",
+   "kind": "part",
+   "module": "pump-3",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-panel-3",
+   "kind": "part",
+   "module": "pump-panel-3",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-screen-3",
+   "kind": "part",
+   "module": "pump-screen-3",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-island-3",
+   "kind": "part",
+   "module": "pump-island-3",
+   "triangles": 196
+  },
+  {
+   "name": "pump-head-3",
+   "kind": "part",
+   "module": "pump-head-3",
+   "triangles": 300
+  },
+  {
+   "name": "pump-sign-3",
+   "kind": "part",
+   "module": "pump-sign-3",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-pillar-3a",
+   "kind": "part",
+   "module": "pump-pillar-3a",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-3a",
+   "kind": "part",
+   "module": "pump-nozzle-3a",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-3a",
+   "kind": "part",
+   "module": "pump-hose-3a",
+   "triangles": 320
+  },
+  {
+   "name": "pump-pillar-3b",
+   "kind": "part",
+   "module": "pump-pillar-3b",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-3b",
+   "kind": "part",
+   "module": "pump-nozzle-3b",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-3b",
+   "kind": "part",
+   "module": "pump-hose-3b",
+   "triangles": 320
+  },
+  {
+   "name": "pump-cabinet-3",
+   "kind": "part",
+   "module": "pump-cabinet-3",
+   "triangles": 300
+  },
+  {
+   "name": "pump-cabinet-top-3",
+   "kind": "part",
+   "module": "pump-cabinet-top-3",
+   "triangles": 300
+  },
+  {
+   "name": "pump-standee-3",
+   "kind": "part",
+   "module": "pump-standee-3",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-4",
+   "kind": "part",
+   "module": "pump-4",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-panel-4",
+   "kind": "part",
+   "module": "pump-panel-4",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-screen-4",
+   "kind": "part",
+   "module": "pump-screen-4",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-island-4",
+   "kind": "part",
+   "module": "pump-island-4",
+   "triangles": 196
+  },
+  {
+   "name": "pump-head-4",
+   "kind": "part",
+   "module": "pump-head-4",
+   "triangles": 300
+  },
+  {
+   "name": "pump-sign-4",
+   "kind": "part",
+   "module": "pump-sign-4",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-pillar-4a",
+   "kind": "part",
+   "module": "pump-pillar-4a",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-4a",
+   "kind": "part",
+   "module": "pump-nozzle-4a",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-4a",
+   "kind": "part",
+   "module": "pump-hose-4a",
+   "triangles": 320
+  },
+  {
+   "name": "pump-pillar-4b",
+   "kind": "part",
+   "module": "pump-pillar-4b",
+   "triangles": 1728
+  },
+  {
+   "name": "pump-nozzle-4b",
+   "kind": "part",
+   "module": "pump-nozzle-4b",
+   "triangles": 92
+  },
+  {
+   "name": "pump-hose-4b",
+   "kind": "part",
+   "module": "pump-hose-4b",
+   "triangles": 320
+  },
+  {
+   "name": "pump-cabinet-4",
+   "kind": "part",
+   "module": "pump-cabinet-4",
+   "triangles": 300
+  },
+  {
+   "name": "pump-cabinet-top-4",
+   "kind": "part",
+   "module": "pump-cabinet-top-4",
+   "triangles": 300
+  },
+  {
+   "name": "mart",
+   "kind": "part",
+   "module": "mart",
+   "triangles": 300
+  },
+  {
+   "name": "mart-band",
+   "kind": "part",
+   "module": "mart-band",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-sign",
+   "kind": "part",
+   "module": "mart-sign",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-eave",
+   "kind": "part",
+   "module": "mart-eave",
+   "triangles": 300
+  },
+  {
+   "name": "mart-window",
+   "kind": "part",
+   "module": "mart-window",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-mullion-1",
+   "kind": "part",
+   "module": "mart-mullion-1",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-mullion-2",
+   "kind": "part",
+   "module": "mart-mullion-2",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-mullion-3",
+   "kind": "part",
+   "module": "mart-mullion-3",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-mullion-4",
+   "kind": "part",
+   "module": "mart-mullion-4",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-mullion-5",
+   "kind": "part",
+   "module": "mart-mullion-5",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-door-frame",
+   "kind": "part",
+   "module": "mart-door-frame",
+   "triangles": 1728
+  },
+  {
+   "name": "mart-door",
+   "kind": "part",
+   "module": "mart-door",
+   "triangles": 1728
+  },
+  {
+   "name": "flagpole-1",
+   "kind": "part",
+   "module": "flagpole-1",
+   "triangles": 832
+  },
+  {
+   "name": "flag-malaysia",
+   "kind": "part",
+   "module": "flag-malaysia",
+   "triangles": 1728
+  },
+  {
+   "name": "flagpole-1-base",
+   "kind": "part",
+   "module": "flagpole-1-base",
+   "triangles": 1728
+  },
+  {
+   "name": "flagpole-1-finial",
+   "kind": "part",
+   "module": "flagpole-1-finial",
+   "triangles": 4992
+  },
+  {
+   "name": "flagpole-2",
+   "kind": "part",
+   "module": "flagpole-2",
+   "triangles": 832
+  },
+  {
+   "name": "flag-johor",
+   "kind": "part",
+   "module": "flag-johor",
+   "triangles": 1728
+  },
+  {
+   "name": "flagpole-2-base",
+   "kind": "part",
+   "module": "flagpole-2-base",
+   "triangles": 1728
+  },
+  {
+   "name": "flagpole-2-finial",
+   "kind": "part",
+   "module": "flagpole-2-finial",
+   "triangles": 4992
+  },
+  {
+   "name": "tree-1-trunk",
+   "kind": "part",
+   "module": "tree-1-trunk",
+   "triangles": 832
+  },
+  {
+   "name": "tree-1",
+   "kind": "part",
+   "module": "tree-1",
+   "triangles": 4992
+  },
+  {
+   "name": "tree-2-trunk",
+   "kind": "part",
+   "module": "tree-2-trunk",
+   "triangles": 832
+  },
+  {
+   "name": "tree-2",
+   "kind": "part",
+   "module": "tree-2",
+   "triangles": 4992
+  },
+  {
+   "name": "tree-3-trunk",
+   "kind": "part",
+   "module": "tree-3-trunk",
+   "triangles": 832
+  },
+  {
+   "name": "tree-3",
+   "kind": "part",
+   "module": "tree-3",
+   "triangles": 4992
+  },
+  {
+   "name": "tree-4-trunk",
+   "kind": "part",
+   "module": "tree-4-trunk",
+   "triangles": 832
+  },
+  {
+   "name": "tree-4",
+   "kind": "part",
+   "module": "tree-4",
+   "triangles": 4992
+  },
+  {
+   "name": "bush-1",
+   "kind": "part",
+   "module": "bush-1",
+   "triangles": 4992
+  },
+  {
+   "name": "bush-2",
+   "kind": "part",
+   "module": "bush-2",
+   "triangles": 4992
+  },
+  {
+   "name": "bush-3",
+   "kind": "part",
+   "module": "bush-3",
+   "triangles": 4992
+  },
+  {
+   "name": "bush-4",
+   "kind": "part",
+   "module": "bush-4",
+   "triangles": 4992
+  },
+  {
+   "name": "pylon-sign",
+   "kind": "part",
+   "module": "pylon-sign",
+   "triangles": 300
+  },
+  {
+   "name": "bin-blue-2",
+   "kind": "part",
+   "module": "bin-blue-2",
+   "triangles": 300
+  },
+  {
+   "name": "bin-blue-2-lid",
+   "kind": "part",
+   "module": "bin-blue-2-lid",
+   "triangles": 1728
+  },
+  {
+   "name": "bin-blue-2-wheels",
+   "kind": "part",
+   "module": "bin-blue-2-wheels",
+   "triangles": 832
+  },
+  {
+   "name": "bin-green-2",
+   "kind": "part",
+   "module": "bin-green-2",
+   "triangles": 300
+  },
+  {
+   "name": "bin-green-2-lid",
+   "kind": "part",
+   "module": "bin-green-2-lid",
+   "triangles": 1728
+  },
+  {
+   "name": "bin-green-2-wheels",
+   "kind": "part",
+   "module": "bin-green-2-wheels",
+   "triangles": 832
+  }
+ ],
+ "unnamedMeshes": 0
+}

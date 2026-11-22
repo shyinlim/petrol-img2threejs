@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Node / macOS / IDE
+node_modules/
+.DS_Store
+.superpowers/
+.codegraph/

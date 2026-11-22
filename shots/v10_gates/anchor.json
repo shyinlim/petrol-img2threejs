@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "warnings": [],
+  "attachments": [
+    {
+      "component": "bin-blue-1",
+      "anchor": "grass-verge-a",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-blue-1-lid",
+      "anchor": "grass-verge-a",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-green-1",
+      "anchor": "grass-verge-a",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-green-1-lid",
+      "anchor": "grass-verge-a",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-blue-2",
+      "anchor": "grass-verge-b",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-blue-2-lid",
+      "anchor": "grass-verge-b",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-green-2",
+      "anchor": "grass-verge-b",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "bin-green-2-lid",
+      "anchor": "grass-verge-b",
+      "anchorKind": "component",
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    }
+  ],
+  "unmeasuredAttachments": [],
+  "attachmentCount": 8,
+  "passed": true
+}

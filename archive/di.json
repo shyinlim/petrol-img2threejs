@@ -1,0 +1,271 @@
+{
+  "sourceImage": "/Users/shyin/Desktop/threejs/reference/diorama.png",
+  "zonesDir": "/Users/shyin/Desktop/threejs/detail",
+  "detailInventory": {
+    "scanMethod": "grid-3x3",
+    "targetMinDetails": 10,
+    "details": [
+      {
+        "id": "canopy-wordmark",
+        "kind": "decal",
+        "description": "White CALTEX letters on the orange fascia, front face",
+        "region": {
+          "x": 0.43,
+          "y": 0.27,
+          "width": 0.11,
+          "height": 0.05,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "fascia front face, white letters",
+        "mapsTo": {
+          "type": "component",
+          "ref": "canopy-wordmark"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r0c1.png",
+        "confidence": 0.85
+      },
+      {
+        "id": "roundel-logo",
+        "kind": "decal",
+        "description": "Round Caltex star emblem on the canopy corner (red and teal star in a white disc)",
+        "region": {
+          "x": 0.6,
+          "y": 0.21,
+          "width": 0.04,
+          "height": 0.095,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "canopy corner emblem",
+        "mapsTo": {
+          "type": "component",
+          "ref": "roundel-logo"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r0c1.png",
+        "confidence": 0.8
+      },
+      {
+        "id": "fascia-bevel",
+        "kind": "bevel",
+        "description": "Canopy fascia has a rounded folded edge with a soft highlight along the top",
+        "region": {
+          "x": 0.11,
+          "y": 0.24,
+          "width": 0.78,
+          "height": 0.14,
+          "units": "normalized"
+        },
+        "scale": "large",
+        "affects": "fascia silhouette edge",
+        "mapsTo": {
+          "type": "component",
+          "ref": "canopy-bevel"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r0c1.png",
+        "confidence": 0.6
+      },
+      {
+        "id": "soffit-downlights",
+        "kind": "emissive",
+        "description": "Small recessed square downlights in the white soffit",
+        "region": {
+          "x": 0.35,
+          "y": 0.34,
+          "width": 0.33,
+          "height": 0.05,
+          "units": "normalized"
+        },
+        "scale": "small",
+        "affects": "soffit underside light spots",
+        "mapsTo": {
+          "type": "component",
+          "ref": "soffit"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r1c1.png",
+        "confidence": 0.7
+      },
+      {
+        "id": "column-number-discs",
+        "kind": "decal",
+        "description": "Round numbered discs on the grey columns",
+        "region": {
+          "x": 0.3,
+          "y": 0.42,
+          "width": 0.4,
+          "height": 0.06,
+          "units": "normalized"
+        },
+        "scale": "small",
+        "affects": "column upper sections",
+        "mapsTo": {
+          "type": "component",
+          "ref": "column-1"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r1c1.png",
+        "confidence": 0.5
+      },
+      {
+        "id": "pump-techron-signs",
+        "kind": "decal",
+        "description": "Pump head signs: Caltex roundel with Techron text on a white and teal panel",
+        "region": {
+          "x": 0.25,
+          "y": 0.47,
+          "width": 0.3,
+          "height": 0.07,
+          "units": "normalized"
+        },
+        "scale": "small",
+        "affects": "4 pump heads",
+        "mapsTo": {
+          "type": "component",
+          "ref": "pump-sign-1"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r1c1.png",
+        "confidence": 0.55
+      },
+      {
+        "id": "mart-orange-band",
+        "kind": "decal",
+        "description": "Orange band with white Mart text across the shop front",
+        "region": {
+          "x": 0.6,
+          "y": 0.43,
+          "width": 0.27,
+          "height": 0.04,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "Mart facade",
+        "mapsTo": {
+          "type": "component",
+          "ref": "mart-band"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r1c2.png",
+        "confidence": 0.8
+      },
+      {
+        "id": "flag-malaysia",
+        "kind": "decal",
+        "description": "Malaysian flag on the first pole: 14 red and white stripes, blue canton with crescent and star",
+        "region": {
+          "x": 0.8,
+          "y": 0.25,
+          "width": 0.07,
+          "height": 0.13,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "first flag face",
+        "mapsTo": {
+          "type": "component",
+          "ref": "flag-malaysia"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r0c2.png",
+        "confidence": 0.8
+      },
+      {
+        "id": "flag-johor",
+        "kind": "decal",
+        "description": "Johor state flag on the second pole: red canton with white crescent and star, dark blue field",
+        "region": {
+          "x": 0.9,
+          "y": 0.3,
+          "width": 0.05,
+          "height": 0.09,
+          "units": "normalized"
+        },
+        "scale": "small",
+        "affects": "second flag face",
+        "mapsTo": {
+          "type": "component",
+          "ref": "flag-johor"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r0c2.png",
+        "confidence": 0.8
+      },
+      {
+        "id": "soil-strata-bands",
+        "kind": "linework",
+        "description": "Horizontal brown soil layers on the slab cut face, darker toward the bottom",
+        "region": {
+          "x": 0.03,
+          "y": 0.64,
+          "width": 0.95,
+          "height": 0.26,
+          "units": "normalized"
+        },
+        "scale": "large",
+        "affects": "slab side face",
+        "mapsTo": {
+          "type": "component",
+          "ref": "base-slab"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r2c1.png",
+        "confidence": 0.8
+      },
+      {
+        "id": "grass-verge-curb",
+        "kind": "ridge",
+        "description": "Grass strips sit slightly raised with a light curb edge against the concrete",
+        "region": {
+          "x": 0.03,
+          "y": 0.54,
+          "width": 0.9,
+          "height": 0.25,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "grass verge edges",
+        "mapsTo": {
+          "type": "component",
+          "ref": "grass-verge-a"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r2c0.png",
+        "confidence": 0.6
+      },
+      {
+        "id": "parking-lines",
+        "kind": "linework",
+        "description": "Yellow lines with black and yellow striped kerbs on the concrete top",
+        "region": {
+          "x": 0.19,
+          "y": 0.54,
+          "width": 0.58,
+          "height": 0.18,
+          "units": "normalized"
+        },
+        "scale": "medium",
+        "affects": "concrete top markings",
+        "mapsTo": {
+          "type": "component",
+          "ref": "concrete-top"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r2c1.png",
+        "confidence": 0.75
+      },
+      {
+        "id": "bin-recycle-marks",
+        "kind": "decal",
+        "description": "Small white recycle mark on the blue and green bins",
+        "region": {
+          "x": 0.1,
+          "y": 0.56,
+          "width": 0.06,
+          "height": 0.05,
+          "units": "normalized"
+        },
+        "scale": "small",
+        "affects": "bin fronts",
+        "mapsTo": {
+          "type": "component",
+          "ref": "bin-blue-1"
+        },
+        "evidenceRef": "/Users/shyin/Desktop/threejs/detail/zone-r2c0.png",
+        "confidence": 0.4
+      }
+    ]
+  },
+  "authoringInstruction": "Open each zone crop under zonesDir and replace every detail stub's kind, description, scale, affects, mapsTo, and confidence with what is actually observed. Add more detail entries per zone if a single zone contains multiple distinct marks; do not leave stubs unfilled or unlinked (mapsTo must reference a real component.localFeatures or material.localOverrides entry)."
+}

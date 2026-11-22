@@ -1,0 +1,14 @@
+{
+  "admitted": true,
+  "reasons": [],
+  "provenance": {
+    "viewpoint": "reference",
+    "sourcePath": "/Users/shyin/Desktop/threejs/reference/diorama_isolated.png",
+    "width": 1024,
+    "height": 687,
+    "foregroundCoverage": 0.3873,
+    "largestComponentFraction": 1.0,
+    "pHash": 16996844211623034112,
+    "duplicateOfHash": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "referenceAreaFraction": 0.3755956036208151,
+  "angles": [
+    {
+      "path": "shots/v8_refine_az090.png",
+      "areaFraction": 0.3153202328966521,
+      "ratio": 0.8395205637576781,
+      "degenerate": false
+    },
+    {
+      "path": "shots/v8_refine_az180.png",
+      "areaFraction": 0.31022988309679767,
+      "ratio": 0.8259678231217854,
+      "degenerate": false
+    }
+  ],
+  "degenerate": false,
+  "collapseRatio": 0.15,
+  "note": "deterministic; zero token; a flat-plane-faking-a-volume collapses in silhouette area when orbited"
+}
