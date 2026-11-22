@@ -6,6 +6,8 @@ A 3D diorama of a Caltex petrol station in Johor, Malaysia. Built purely in Thre
 
 Live Demo: https://shyinlim.github.io/petrol-img2threejs/
 
+![Caltex Station Demo](readme/demo.gif)
+
 ## Quick Start
 
 ```bash

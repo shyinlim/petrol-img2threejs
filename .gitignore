@@ -226,3 +226,4 @@ node_modules/
 .DS_Store
 .superpowers/
 .codegraph/
+readme/*.mov
