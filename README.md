@@ -4,6 +4,8 @@
 
 A 3D diorama of a Caltex petrol station in Johor, Malaysia. Built purely in Three.js code with procedural geometry, car animation, and Canvas 2D / SVG textures, with no external 3D model files.
 
+Live Demo: https://shyinlim.github.io/petrol-img2threejs/
+
 ## Quick Start
 
 ```bash

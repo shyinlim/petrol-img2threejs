@@ -4,6 +4,8 @@
 
 馬來西亞柔佛 (Johor, Malaysia) Caltex 加油站的 3D Diorama，完全透過 Three.js 程式碼生成幾何模型、車輛動畫與 Canvas 2D / SVG 貼圖，無外部 3D 模型檔。
 
+線上展示：https://shyinlim.github.io/petrol-img2threejs/
+
 ## 快速啟動
 
 ```bash
